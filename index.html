@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SOUNDFCUK TEST RUN</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
+		<script>
+		  SC.initialize({
+		    client_id: '1e14dbad65f82fa3d3b30b940a36bbb6',
+		    //redirect_uri: 'http://example.com/callback'
+		  });
+		</script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script src="scripts/soundfcuk.js"></script>
+		<script src="scripts/test.js"></script>
+        <script src="scripts/fetchRequest.js"></script>
+        <script src="scripts/canvas.js"></script>
+    </head>
+    <body>
+    	<!-- Top line -->
+   		<h1 id='title'>
+			<img src="media/carlos.jpg">
+			<a href="https://github.com/BK-TN/Soundfcuk" title="View Github repo">Soundfetch</a>
+		</h1>
+		<div id="searchline">
+			<input id="search-query" type='text' placeholder="Search...">
+			<select id="search-type">
+				<option value="tracks">Tracks</option>
+				<option value="users">Users</option>
+				<!--<option value="playlists">Playlists</option>
+				<option value="groups">Groups</option>-->
+			</select>
+			<input id="search-go" type="submit" value="Go">
+		</div>
+		<div id="settings">
+			Show as 
+			<select id="showas">
+				<option value="grid">Grid</option>
+				<option value="list">List</option>
+			</select>
+			- Filter results 
+			<input id="filter" type="text">
+		</div>
+		<div id="status">
+
+        </div>
+		<div id="grid">
+            <!--<ul id="tabs">-->
+                <!-- Tabs are put here -->
+            <!--</ul>-->
+			<!-- Tracks/users/playlists/groups are put here -->
+            <div id="canvasContainer">
+                <canvas id="canvas"></canvas>
+            </div>
+			<!--<div id="output">
+			</div>-->
+			<div id="paging">
+				<a href="#" id="paging-prev">Prev</a>
+				<span id="paging-num"></span>
+				<a href="#" id="paging-next">Next</a>
+			</div>
+			<div id="tooltip">
+				Tooltip
+			</div>
+		</div>
+    </body>
+</html>
