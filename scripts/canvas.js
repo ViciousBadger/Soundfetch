@@ -33,8 +33,8 @@ $(document).ready(function () {
     
     //Main canvas loop
     setInterval(function () {
-        //ctx.canvas.width = $(ctx.canvas).parent().width();
-        //ctx.canvas.height = $(ctx.canvas).parent().height();
+        ctx.canvas.width = $(ctx.canvas).parent().width();
+        ctx.canvas.height = $(ctx.canvas).parent().height();
 
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
@@ -161,7 +161,7 @@ function CanvasItem(i) {
         && mousePos.y < this.pos.y + itemSize;
 
         if (mouseIsOver && !this.hover) {
-            setTooltip(this.item.title);
+            setTooltip("<b>User: </b>" + this.item.user.username + " - <b>Track: </b>" + this.item.title);
             this.hover = true;
         }
         if (!mouseIsOver && this.hover) {

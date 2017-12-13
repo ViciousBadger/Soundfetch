@@ -55,7 +55,7 @@ function Tab(name) {
     $("<a href=\"#\">" + name + "</a>").appendTo(listitem).click(function() {
     	console.log("selected tab " + name)
     	listitem.addClass("selected")
-    });;
+    });
     $("<a href=\"#\" class=\"close\">X</a>").appendTo(listitem).click(function() {
     	console.log("closed tab " + name)
     });
